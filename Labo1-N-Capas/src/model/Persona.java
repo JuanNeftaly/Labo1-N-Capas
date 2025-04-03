@@ -50,6 +50,11 @@ public class Persona {
     public void setBithdate(LocalDate bithdate) {
         this.bithdate = bithdate;
     }
+//verificar si es menor de 18
+
+    public boolean isUnderage() {
+        return LocalDate.now().minusYears(18).isBefore(this.bithdate);
+    }
 
 
 }
