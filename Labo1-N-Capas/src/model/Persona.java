@@ -8,14 +8,14 @@ public class Persona {
     private String name;
     private String lastName;
     private String dui;
-    private LocalDate bithdate;
+    private LocalDate birthdate;
 
     // constructor
-    public Persona(String name, String lastName, String dui, LocalDate bithdate) {
+    public Persona(String name, String lastName, String dui, LocalDate birthdate) {
         this.name = name;
         this.lastName = lastName;
         this.dui = dui;
-        this.bithdate = bithdate;
+        this.birthdate = birthdate;
     }
 
     // Getters y Setters
@@ -44,16 +44,16 @@ public class Persona {
     }
 
     public LocalDate getBithdate() {
-        return bithdate;
+        return birthdate;
     }
 
     public void setBithdate(LocalDate bithdate) {
-        this.bithdate = bithdate;
+        this.birthdate = bithdate;
     }
 //verificar si es menor de 18
 
     public boolean isUnderage() {
-        return LocalDate.now().minusYears(18).isBefore(this.bithdate);
+        return LocalDate.now().minusYears(18).isBefore(this.birthdate);
     }
 
 
