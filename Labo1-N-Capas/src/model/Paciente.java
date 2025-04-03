@@ -1,6 +1,7 @@
 package model;
 import java.time.LocalDate;
 
+// herencia de persona
 public class Paciente extends Persona {
 
     public Paciente(String name, String lastName, String dui, LocalDate birthdate) {
@@ -10,6 +11,7 @@ public class Paciente extends Persona {
         }
     }
 
+    // metodo para verificar edad
     @Override
     public void setDui(String dui) {
         if (isUnderage()) {
