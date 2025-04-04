@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0f9f965-03e8-4bdb-bcb6-757439b66b0d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Labo1-N-Capas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/data/DummyData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ui/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ui/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/IdDoctorGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/IdDoctorGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Labo1-N-Capas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/Labo1-N-Capas.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/utils/IsUnderAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/IsUnderAge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -40,7 +44,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "develop",
+    "git-widget-placeholder": "feature-registerPatient",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/neftaly/Escritorio/Labo1-N-Capas/Labo1-N-Capas/src",
     "node.js.detected.package.eslint": "true",
@@ -54,6 +58,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -76,6 +85,7 @@
       <workItem from="1743738073955" duration="49000" />
       <workItem from="1743739122393" duration="1030000" />
       <workItem from="1743740163668" duration="312000" />
+      <workItem from="1743808447535" duration="616000" />
     </task>
     <servers />
   </component>
