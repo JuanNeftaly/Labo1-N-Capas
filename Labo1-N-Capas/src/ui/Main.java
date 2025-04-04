@@ -1,6 +1,4 @@
 package ui;
-
-
 import utils.Menu;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
