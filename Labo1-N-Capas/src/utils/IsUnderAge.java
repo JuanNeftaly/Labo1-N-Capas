@@ -1,5 +1,7 @@
 package utils;
 
+import model.Paciente;
+
 import java.time.LocalDate;
 
 public class IsUnderAge {
