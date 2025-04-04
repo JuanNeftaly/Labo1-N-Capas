@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0f9f965-03e8-4bdb-bcb6-757439b66b0d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/utils/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/IdDoctorGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/IdDoctorGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +34,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature-utils&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/neftaly/Escritorio/Labo1-N-Capas/Labo1-N-Capas&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
@@ -63,6 +65,8 @@
       <workItem from="1743736234187" duration="17000" />
       <workItem from="1743736278564" duration="199000" />
       <workItem from="1743738073955" duration="49000" />
+      <workItem from="1743739122393" duration="1030000" />
+      <workItem from="1743740163668" duration="312000" />
     </task>
     <servers />
   </component>

@@ -5,7 +5,7 @@ public class IdDoctorGenerator {
     private static final String SUFIJO = "MD";
     private static final Random random = new Random();
 
-    public static String generarIDDoctor() {
+    public static String IdZaunGenerator() {
         return String.format("%s-%d%s%d-%s%s",
                 PREFIJO,
                 random.nextInt(10),
