@@ -11,6 +11,6 @@ public class IsUnderAge {
 
     // verificar si el chaval es mayor de edad
     public static void setDuiIfUnderage(Paciente paciente, String dui){
-        paciente.setDuiDirectly(isUnderAge(paciente.getBirthdate()) ? "00000000-0" : dui);
+        paciente.setDuiDirectly(isUnderAge(paciente.getBirthdate()) ? "00000000-0" : dui); // si henry, chat me dijo que un if else es muy tonto
     }
 }

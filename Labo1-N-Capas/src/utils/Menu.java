@@ -5,6 +5,7 @@ import service.PacienteService;
 import service.*;
 
 import java.time.LocalDate;
+import java.util.List;
 import java.util.Scanner;
 
 public class Menu {
@@ -17,6 +18,7 @@ public class Menu {
 
         // pacientes
         PacienteService pacienteService = new PacienteService();
+        List<Paciente> pacientes = pacienteService.obtenerTodos();
 
         // doctores
 
@@ -65,6 +67,7 @@ public class Menu {
                     break;
                 case 8:
                     System.out.println("Mostrar la lista de pacientes");
+                    pacienteService.mostrarPacientes();
                     break;
                 case 9:
                     System.out.println("Saliendo del programa...");

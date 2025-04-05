@@ -16,7 +16,7 @@ public class PacienteService {
 
     public void registrarPaciente(Paciente paciente) {
         dao.agregarPaciente(paciente);
-        System.out.println("Paciente registrado exitosamente.");
+        System.out.println("Paciente registrado");
     }
 
     public Paciente buscarPorDui(String dui) {
@@ -29,5 +29,12 @@ public class PacienteService {
 
     public List<Paciente> obtenerTodos() {
         return dao.obtenerTodos();
+    }
+
+    public void mostrarPacientes() {
+        List<Paciente> pacientes = dao.obtenerTodos();
+        for (Paciente paciente : pacientes) {
+            System.out.println("Nombre: " + paciente.getName() + ", Apellido: " + paciente.getLastName() + ", Fecha de Nacimiento: " + paciente.getBirthdate());
+        }
     }
 }
