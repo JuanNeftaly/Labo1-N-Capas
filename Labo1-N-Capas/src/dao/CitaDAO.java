@@ -1,4 +1,4 @@
 package dao;
 
-public class CitaDAO {
+public interface CitaDAO {
 }

@@ -41,11 +41,11 @@ public class Persona {
         this.dui = dui;
     }
 
-    public LocalDate getBithdate() {
+    public LocalDate getBirthdate() {
         return birthdate;
     }
 
-    public void setBithdate(LocalDate bithdate) {
+    public void setBirthdate(LocalDate bithdate) {
         this.birthdate = bithdate;
     }
 }
