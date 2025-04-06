@@ -7,10 +7,8 @@
     <list default="true" id="a0f9f965-03e8-4bdb-bcb6-757439b66b0d" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/dao/CitaDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/CitaDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dao/DoctorDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/DoctorDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/service/PacienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/PacienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/IsUnderAge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/IsUnderAge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/utils/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/Cita.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/Cita.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/service/CitaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/service/CitaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +45,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "feature-registerPatient",
+    "git-widget-placeholder": "feature-citas",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/home/neftaly/Escritorio/Labo1-N-Capas/Labo1-N-Capas/src",
     "node.js.detected.package.eslint": "true",
@@ -66,13 +64,16 @@
       <recent name="" />
     </key>
   </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.25659.59" />
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.25659.59" />
-      </set>
-    </attachedChunks>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
