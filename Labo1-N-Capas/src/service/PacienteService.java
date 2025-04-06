@@ -2,39 +2,35 @@ package service;
 
 import dao.PacienteDAO;
 import model.Paciente;
-
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Scanner;
 
 public class PacienteService {
-    private PacienteDAO dao;
+    private final PacienteDAO pacienteDAO;
 
     public PacienteService() {
-        this.dao = new PacienteDAO();
+        this.pacienteDAO = new PacienteDAO();
     }
 
     public void registrarPaciente(Paciente paciente) {
-        dao.agregarPaciente(paciente);
-        System.out.println("Paciente registrado");
-    }
-
-    public Paciente buscarPorDui(String dui) {
-        return dao.buscarPorDui(dui);
-    }
-
-    public List<Paciente> buscarPorNombreApellido(String nombre, String apellido) {
-        return dao.buscarPorNombreApellido(nombre, apellido);
+        pacienteDAO.agregarPaciente(paciente);
     }
 
     public List<Paciente> obtenerTodos() {
-        return dao.obtenerTodos();
+        return pacienteDAO.obtenerTodos();
+    }
+
+    public Paciente buscarPorDui(String dui) {
+        return pacienteDAO.buscarPorDui(dui);
+    }
+
+    public List<Paciente> buscarPorNombreApellido(String nombre, String apellido) {
+        return pacienteDAO.buscarPorNombreApellido(nombre, apellido);
     }
 
     public void mostrarPacientes() {
-        List<Paciente> pacientes = dao.obtenerTodos();
-        for (Paciente paciente : pacientes) {
-            System.out.println("Nombre: " + paciente.getName() + ", Apellido: " + paciente.getLastName() + ", Fecha de Nacimiento: " + paciente.getBirthdate());
+        for (Paciente p : pacienteDAO.obtenerTodos()) {
+            System.out.println(p.getName() + " " + p.getLastName() + " - DUI: " + p.getDui());
         }
     }
 }

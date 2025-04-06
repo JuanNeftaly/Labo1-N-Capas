@@ -4,7 +4,6 @@ import java.time.LocalDate;
 import utils.IsUnderAge;
 
 public class Paciente extends Persona {
-
     public Paciente(String name, String lastName, String dui, LocalDate birthdate) {
         super(name, lastName, dui, birthdate);
         IsUnderAge.setDuiIfUnderage(this, dui);
@@ -13,9 +12,5 @@ public class Paciente extends Persona {
     @Override
     public void setDui(String dui) {
         IsUnderAge.setDuiIfUnderage(this, dui);
-    }
-
-    public void setDuiDirectly(String dui) {
-        super.setDui(dui);
     }
 }
