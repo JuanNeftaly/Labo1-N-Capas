@@ -13,4 +13,9 @@ public class Paciente extends Persona {
     public void setDui(String dui) {
         IsUnderAge.setDuiIfUnderage(this, dui);
     }
+
+
+    public void setDuiDirectly(String dui) {
+        super.setDui(dui);
+    }
 }
