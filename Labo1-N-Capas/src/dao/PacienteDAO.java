@@ -18,8 +18,7 @@ public class PacienteDAO {
 
     public List<Paciente> buscarPorNombreApellido(String nombre, String apellido) {
         return pacientes.stream()
-                .filter(p -> p.getName().equalsIgnoreCase(nombre)
-                        && p.getLastName().equalsIgnoreCase(apellido))
+                .filter(p -> p.getName().equalsIgnoreCase(nombre) && p.getLastName().equalsIgnoreCase(apellido))
                 .collect(Collectors.toList());
     }
 
@@ -34,3 +33,4 @@ public class PacienteDAO {
         pacientes.add(paciente);
     }
 }
+
