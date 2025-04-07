@@ -1,11 +1,18 @@
 package dao;
 
+import data.DummyData;
 import model.Doctor;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DoctorDAO {
     private static final List<Doctor> doctores = new ArrayList<>();
+
+    public DoctorDAO() {
+        if (doctores.isEmpty()) {
+            doctores.addAll(DummyData.getDoctoresDummy());
+        }
+    }
 
     public void addDoctor(Doctor doctor) {
         doctores.add(doctor);
