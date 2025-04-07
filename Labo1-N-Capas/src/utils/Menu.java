@@ -15,7 +15,7 @@ public class Menu {
 
     public static void menu() {
         Scanner scanner = new Scanner(System.in);
-        int option;
+        int option = -1;
 
         PacienteService pacienteService = new PacienteService();
         DoctorService doctorService = new DoctorService();
@@ -36,39 +36,45 @@ public class Menu {
             System.out.println("8. 👥 Mostrar lista de pacientes registrados");
             System.out.println("9. Salir 🚪");
             System.out.print("Opción: ");
-            option = scanner.nextInt();
-            scanner.nextLine();
 
-            switch (option) {
-                case 1:
-                    menuRegistrarPaciente(pacienteService);
-                    break;
-                case 2:
-                    menuRegistrarDoctor(doctorService);
-                    break;
-                case 3:
-                    menuAgendarCita(doctorService, pacienteService, citaService);
-                    break;
-                case 4:
-                    menuCancelarCita(citaService);
-                    break;
-                case 5:
-                    menuListarCitas(citaService);
-                    break;
-                case 6:
-                    menuHistorialCitasPaciente(citaService);
-                    break;
-                case 7:
-                    doctorService.showAllDoctors();
-                    break;
-                case 8:
-                    pacienteService.mostrarPacientes();
-                    break;
-                case 9:
-                    System.out.println("¡Hasta pronto! 👋");
-                    break;
-                default:
-                    System.out.println("❗ Opción no válida, por favor intente de nuevo.");
+            try {
+                option = scanner.nextInt();
+                scanner.nextLine();
+
+                switch (option) {
+                    case 1:
+                        menuRegistrarPaciente(pacienteService);
+                        break;
+                    case 2:
+                        menuRegistrarDoctor(doctorService);
+                        break;
+                    case 3:
+                        menuAgendarCita(doctorService, pacienteService, citaService);
+                        break;
+                    case 4:
+                        menuCancelarCita(citaService);
+                        break;
+                    case 5:
+                        menuListarCitas(citaService);
+                        break;
+                    case 6:
+                        menuHistorialCitasPaciente(citaService);
+                        break;
+                    case 7:
+                        doctorService.showAllDoctors();
+                        break;
+                    case 8:
+                        pacienteService.mostrarPacientes();
+                        break;
+                    case 9:
+                        System.out.println("¡Hasta pronto! 👋");
+                        break;
+                    default:
+                        System.out.println("❗ Opción no válida, por favor intente de nuevo.");
+                }
+            } catch (Exception e) {
+                System.out.println("Ingrese un numero porfavor");
+                scanner.nextLine();
             }
             System.out.println();
         } while (option != 9);
@@ -196,7 +202,12 @@ public class Menu {
         }
         System.out.println("Listado de citas:");
         for (int i = 0; i < citas.size(); i++) {
-            System.out.println(i + ". " + citas.get(i));
+            Cita c = citas.get(i);
+            System.out.println(i + ". Doctor: " + c.getDoctor().getName() + " " + c.getDoctor().getLastName() +
+                    ", Paciente: " + c.getPaciente().getName() + " " + c.getPaciente().getLastName() +
+                    ", Fecha: " + c.getFecha() +
+                    ", Hora: " + c.getHora() +
+                    ", Asistió: " + (c.isAsistio() ? "Sí" : "No"));
         }
         System.out.print("Ingrese el índice de la cita a cancelar: ");
         int index = scanner.nextInt();
@@ -212,15 +223,30 @@ public class Menu {
             return;
         }
         for (Cita c : citas) {
-            System.out.println(c);
+            System.out.println("Doctor: " + c.getDoctor().getName() + " " + c.getDoctor().getLastName() +
+                    ", Paciente: " + c.getPaciente().getName() + " " + c.getPaciente().getLastName() +
+                    ", Hora: " + c.getHora() +
+                    ", Asistió: No");
         }
     }
 
-    public static void menuHistorialCitasPaciente(CitaService citaService) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("=== 🔎 Historial de Citas de un Paciente ===");
-        System.out.print("Ingrese el DUI del paciente: ");
-        String dui = scanner.nextLine();
-        citaService.listCitasByPacienteDui(dui);
-    }
+   public static void menuHistorialCitasPaciente(CitaService citaService) {
+       Scanner scanner = new Scanner(System.in);
+       System.out.println("=== 🔎 Historial de Citas de un Paciente ===");
+       System.out.print("Ingrese el DUI del paciente: ");
+       String dui = scanner.nextLine();
+       List<Cita> citas = citaService.listCitasByPacienteDui(dui);
+       if (citas.isEmpty()) {
+           System.out.println("⚠️ No hay citas registradas para este paciente.");
+       } else {
+           System.out.println("=== Historial de Citas ===");
+           for (Cita c : citas) {
+               System.out.println("Doctor: " + c.getDoctor().getName() + " " + c.getDoctor().getLastName());
+               System.out.println("Fecha: " + c.getFecha());
+               System.out.println("Hora: " + c.getHora());
+               System.out.println("Asistió: " + (c.isAsistio() ? "Sí" : "No"));
+               System.out.println("----------------------------");
+           }
+       }
+   }
 }

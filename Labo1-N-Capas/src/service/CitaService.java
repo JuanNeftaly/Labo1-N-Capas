@@ -91,11 +91,12 @@ public class CitaService {
         }
     }
 
-    public void listCitasByPacienteDui(String dui) {
+    public List<Cita> listCitasByPacienteDui(String dui) {
         for (Cita c : citaDAO.getAllCitas()) {
             if (c.getPaciente().getDui().equals(dui)) {
                 System.out.println(c);
             }
         }
+        return null;
     }
 }
