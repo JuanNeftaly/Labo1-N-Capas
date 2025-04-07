@@ -102,7 +102,6 @@ public class Menu {
         LocalDate birthdate = LocalDate.of(year, month, day);
         Paciente nuevoPaciente = new Paciente(name, lastName, dui, birthdate);
         pacienteService.registrarPaciente(nuevoPaciente);
-        System.out.println("✅ Paciente registrado exitosamente.");
     }
 
     public static void menuRegistrarDoctor(DoctorService doctorService) {
